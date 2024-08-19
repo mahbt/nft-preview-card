@@ -1,0 +1,124 @@
+:root {
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  --very-dark-blue-bg: hsl(217, 54%, 11%);
+  --very-dark-blue-card-bg: hsl(216, 50%, 16%);
+  --very-dark-blue-line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Outfit", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  color: var(--soft-blue);
+  background: var(--very-dark-blue-bg);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.attribution {
+  position: fixed;
+  bottom: 0;
+}
+.container {
+  background: var(--very-dark-blue-card-bg);
+  padding: 24px 24px 30px;
+  border-radius: 15px;
+  max-width: 350px;
+  max-height: 596px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card-banner {
+  height: 300px;
+  width: 300px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url(./images/image-equilibrium.jpg) no-repeat center center/cover;
+  overflow: hidden;
+}
+.card-banner .view {
+  position: absolute;
+  background: hsla(178, 100%, 50%, 0.493);
+  padding: 100%;
+  display: none;
+  transition: all 0.3s;
+}
+.card-banner:hover .view {
+  display: block;
+}
+.card-content h2 {
+  margin-bottom: 15px;
+  color: #fff;
+  font-size: 22px;
+  line-height: 1.2;
+  cursor: pointer;
+}
+.card-content p {
+  line-height: 1.4;
+  letter-spacing: 0.2px;
+}
+.card-content .nft-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 23px 0 18px;
+  border-bottom: 1px solid var(--very-dark-blue-line);
+  font-size: 14px;
+  font-weight: 400;
+}
+.card-content .nft-details div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.nft-details .eth-amount p {
+  color: var(--cyan);
+  font-weight: 600;
+}
+.profile-section {
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+  width: 100%;
+  margin-top: 15px;
+}
+.profile-section img {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+}
+.profile-section p a {
+  color: #fff;
+  text-decoration: 0;
+  cursor: pointer;
+}
+.profile-section p a:hover,
+.card-content h2:hover {
+  color: var(--cyan);
+}
+@media (max-width: 375px) {
+  .container {
+    max-width: 330px;
+  }
+  .card-banner {
+    width: 275px;
+    height: 275px;
+  }
+}
